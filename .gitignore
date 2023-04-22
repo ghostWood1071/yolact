@@ -132,8 +132,6 @@ ssd.pytorch/
 
 # some datasets
 data/VOCdevkit/
-data/coco/images/
-data/coco/annotations/
 ap_data.pkl
 results/
 logs/
@@ -150,7 +148,6 @@ img/
 scripts/aws-ohio/
 scripts/aws3/
 data/config_dev.py
-data/coco/
 data/sbd/
 
 vid/
