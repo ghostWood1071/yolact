@@ -765,6 +765,9 @@ resnet_upper_lower_config = yolact_resnet50_config.copy({
     # Dataset stuff
     'dataset': upper_lower_dataset,
     'num_classes': len(upper_lower_dataset.class_names) + 1,
+    'max_iter': 100, #batch s = 10 8 lr = 0.01 
+    'lr_steps': (1000, 1250)
+     
 })
 
 yolact_resnet50_pascal_config = yolact_resnet50_config.copy({
