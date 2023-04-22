@@ -135,7 +135,7 @@ upper_lower_dataset = dataset_base.copy({
   'valid_info': './data/coco/annotations/test.json',
   'valid_images': './data/coco/images/',
   'class_names': ('full', 'lower', 'upper'),
-  'label_map': { 1:1, 2:2, 3:3 }
+  'label_map': { 0:1, 1:2, 2:3 }
 })
 
 coco2014_dataset = dataset_base.copy({
