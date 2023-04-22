@@ -770,7 +770,7 @@ resnet_upper_lower_config = yolact_resnet50_config.copy({
      
 })
 
-yolact_resnet50_pascal_config = yolact_resnet50_config.copy({
+yolact_resnet50_pascal_config = yolact_resnet50_config.copy({   
     'name': None, # Will default to yolact_resnet50_pascal
     
     # Dataset stuff
