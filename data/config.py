@@ -128,6 +128,16 @@ dataset_base = Config({
     'label_map': None
 })
 
+upper_lower_dataset = dataset_base.copy({
+  'name': 'upper_lower',
+  'train_info': './data/coco/annotations/train.json',
+  'train_images': './data/coco/images/',
+  'valid_info': './data/coco/annotations/test.json',
+  'valid_images': './data/coco/images/',
+  'class_names': ('full', 'lower', 'upper'),
+  'label_map': { 1:1, 2:2, 3:3 }
+})
+
 coco2014_dataset = dataset_base.copy({
     'name': 'COCO 2014',
     
@@ -750,6 +760,12 @@ yolact_resnet50_config = yolact_base_config.copy({
     }),
 })
 
+resnet_upper_lower_config = yolact_resnet50_config.copy({
+    'name': 'yolact_plus_resnet50_cig_butts',
+    # Dataset stuff
+    'dataset': upper_lower_dataset,
+    'num_classes': len(upper_lower_dataset.class_names) + 1,
+})
 
 yolact_resnet50_pascal_config = yolact_resnet50_config.copy({
     'name': None, # Will default to yolact_resnet50_pascal
